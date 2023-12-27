@@ -2,10 +2,10 @@ import Config
 
 # Configure your database
 config :phoenix_fund, PhoenixFund.Repo,
-  username: "postgres",
-  password: "BE3IpcQwLh2bEk7V",
-  hostname: "db.nvbpbonywygvqdjsgweu.supabase.co",
-  database: "postgres",
+  username: System.get_env("DATABASE_NAME"),
+  password: System.get_env("DATABASE_PASSWORD"),
+  hostname: System.get_env("DATABASE_HOST_NAME"),
+  database: System.get_env("DATABASE_USERNAME"),
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
